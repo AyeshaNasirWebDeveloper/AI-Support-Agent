@@ -44,7 +44,7 @@ export default function SupportAgentUI() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:8000/ask', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ask`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, session_id: 'user_session' }),
