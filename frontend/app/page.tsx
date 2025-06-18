@@ -44,7 +44,7 @@ export default function SupportAgentUI() {
     setError(null);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/ask`, {
+      const response = await fetch('https://ai-support-agent-8x9i.vercel.app/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, session_id: 'user_session' }),
